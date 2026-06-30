@@ -1,9 +1,9 @@
-name: Deploy Portfolio to GitHub Pages
+name: Deploy Portfolio Website to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  
 
 permissions:
   contents: read
@@ -19,27 +19,19 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # ✅ ADD THIS (fixes Node warning + stabilizes workflow)
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload Artifacts
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 
