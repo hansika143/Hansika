@@ -790,3 +790,19 @@ footer {
         margin-top: 0.5rem;
     }
 }
+/* Styling for your custom degree header text */
+.typing-text {
+    color: var(--accent-color) !important; /* Locks color to clear theme blue */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Styling for your biography paragraph text */
+.profile-desc {
+    color: var(--text-primary) !important; /* Forces the color to change dynamically to white/black */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: block;
+}
+
